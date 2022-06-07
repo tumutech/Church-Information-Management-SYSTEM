@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="523.0" prefWidth="781.0" style="-fx-background-color: #CCCCCCFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bse2.projects.AdminController">
+   <children>
+      <MenuBar layoutX="-4.0" layoutY="-1.0" prefHeight="30.0" prefWidth="783.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="New Member">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" text="New Event">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="New Visitor">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="V" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Add Offering">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Add Donation">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Print">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Events" />
+              <MenuItem mnemonicParsing="false" text="Members" />
+                  <MenuItem mnemonicParsing="false" text="Finance" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Read Manual" />
+                  <MenuItem mnemonicParsing="false" text="Online Helpline" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Change Profile Picture" />
+                  <MenuItem mnemonicParsing="false" text="Change Password" />
+                  <MenuItem mnemonicParsing="false" text="Log out" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="About">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Developer" />
+                  <MenuItem mnemonicParsing="false" text="Software Version" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutY="29.0" prefHeight="494.0" prefWidth="214.0">
+         <children>
+            <VBox layoutX="9.0" layoutY="162.0" prefHeight="71.0" prefWidth="187.0" />
+            <VBox layoutX="9.0" layoutY="233.0" prefHeight="51.0" prefWidth="187.0" />
+            <VBox layoutX="10.0" layoutY="355.0" prefHeight="54.0" prefWidth="187.0" />
+            <AnchorPane layoutX="7.0" layoutY="135.0" prefHeight="221.0" prefWidth="194.0" style="-fx-background-color: #CCCCCCFF; -fx-opacity: 70%;">
+               <children>
+                  <Label fx:id="myview" alignment="CENTER" layoutY="-3.0" prefHeight="30.0" prefWidth="202.0" text="[username here]" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="14.0" layoutY="27.0" prefHeight="142.0" prefWidth="179.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="178.0" text="General Information">
+                           <font>
+                              <Font name="Lucida Bright" size="12.0" />
+                           </font>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="184.0" text="Church Name" />
+                              <TextField focusTraversable="false" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="178.0" text="Address" />
+                              <TextField focusTraversable="false" />
+                              <HBox prefHeight="24.0" prefWidth="179.0" />
+                           </children>
+                        </VBox>
+                        <Separator prefHeight="24.0" prefWidth="179.0" />
+                        <VBox>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="179.0" text="Contact" />
+                              <PasswordField accessibleRole="TEXT_FIELD" focusTraversable="false" />
+                              <HBox prefHeight="24.0" prefWidth="179.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <Button alignment="CENTER" defaultButton="true" layoutX="38.0" layoutY="181.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Update" />
+                  <Button fx:id="logout" layoutX="104.0" layoutY="181.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: white;" text="Log out" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="108.0" fitWidth="155.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="442.0" layoutY="103.0">
+         <children>
+            <AnchorPane layoutX="-0.800000011920929" layoutY="82.39999389648438" />
+            <Pane />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="225.0" layoutY="46.0" prefHeight="38.0" prefWidth="535.0" text="[Welcome message to be placed here]" />
+      <TabPane fx:id="tabpane" layoutX="222.0" layoutY="111.0" prefHeight="366.0" prefWidth="543.0" style="-fx-border-width: 2px;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Statistics">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane layoutX="55.0" layoutY="14.0" prefHeight="157.0" prefWidth="187.0" style="-fx-background-radius: 10px; -fx-background-color: white;">
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="64.0" fitWidth="79.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@images/members.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="mno" alignment="CENTER" prefHeight="24.0" prefWidth="178.0" text="No" textAlignment="CENTER" textFill="#0099cc">
+                                       <font>
+                                          <Font name="Lucida Console" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <bottom>
+                              <ToolBar prefHeight="25.0" prefWidth="188.0" BorderPane.alignment="CENTER">
+                                <items>
+                                    <Button fx:id="conbutton" mnemonicParsing="false" onAction="#addactiontab" prefHeight="26.0" prefWidth="54.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px;" text="NEW">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                  <Button fx:id="viewmember" mnemonicParsing="false" onAction="#getmembers" prefHeight="25.0" prefWidth="50.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" text="VIEW">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                    <Button mnemonicParsing="false" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" text="DELETE" />
+                                </items>
+                              </ToolBar>
+                           </bottom>
+                           <top>
+                              <Label fx:id="mnot" alignment="CENTER" prefHeight="20.0" prefWidth="193.0" style="-fx-background-color: #0099CCFF; -fx-border-radius: 10px 10px 0px 0px; -fx-background-radius: 10px 10px 0px 0px;" text="Members" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                        </BorderPane>
+                        <BorderPane layoutX="315.0" layoutY="14.0" prefHeight="154.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                           <top>
+                              <Label fx:id="eventlabelh" alignment="CENTER" prefHeight="23.0" prefWidth="193.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px 10px 0px 0px; -fx-background-color: #0099CCFF;" text="Events" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <bottom>
+                              <ToolBar prefHeight="19.0" prefWidth="187.0" BorderPane.alignment="CENTER">
+                                 <items>
+                                    <Button fx:id="addEventbutton" mnemonicParsing="false" onAction="#addactiontab" prefHeight="26.0" prefWidth="54.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px;" text="ADD" />
+                                    <Button fx:id="vieweventbutton" mnemonicParsing="false" onAction="#viewevent" prefHeight="26.0" prefWidth="49.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" text="VIEW" />
+                                    <Button mnemonicParsing="false" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" text="DELETE" />
+                                 </items>
+                              </ToolBar>
+                           </bottom>
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="62.0" fitWidth="76.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@images/events.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="eventlabel" alignment="CENTER" prefHeight="25.0" prefWidth="186.0" text="Label" textFill="#0099cc">
+                                       <font>
+                                          <Font name="Lucida Console" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane layoutX="55.0" layoutY="183.0" prefHeight="151.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                           <top>
+                              <Label fx:id="visitorno" alignment="CENTER" prefHeight="18.0" prefWidth="186.0" style="-fx-background-radius: 10px;" text="Visitors" textFill="#0099cc" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="84.0" pickOnBounds="true" smooth="false">
+                                       <image>
+                                          <Image url="@images/visitors.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="visitorno" alignment="CENTER" prefHeight="25.0" prefWidth="186.0" text="Label" textFill="#0099cc">
+                                       <font>
+                                          <Font name="Lucida Console" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <bottom>
+                              <ToolBar prefHeight="38.0" prefWidth="193.0" BorderPane.alignment="CENTER">
+                                 <items>
+                                    <Button mnemonicParsing="false" onAction="#addactiontab" prefHeight="26.0" prefWidth="54.0" text="ADD" />
+                                    <Button fx:id="viewVisitors" mnemonicParsing="false" onAction="#getvisitors" prefHeight="26.0" prefWidth="49.0" text="VIEW" />
+                                    <Button mnemonicParsing="false" text="DELETE" />
+                                 </items>
+                              </ToolBar>
+                           </bottom>
+                        </BorderPane>
+                        <BorderPane layoutX="315.0" layoutY="183.0" prefHeight="151.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" smooth="false">
+                                       <image>
+                                          <Image url="@images/finance.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="financeno" alignment="CENTER" prefHeight="25.0" prefWidth="186.0" text="Label" textFill="#0099cc">
+                                       <font>
+                                          <Font name="Lucida Console" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <top>
+                              <Label fx:id="financenov" alignment="CENTER" prefHeight="21.0" prefWidth="187.0" style="-fx-border-radius: 10px;" text="Finance" textFill="#0099cc" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <bottom>
+                              <ToolBar prefHeight="38.0" prefWidth="193.0" BorderPane.alignment="CENTER">
+                                 <items>
+                                    <Button mnemonicParsing="false" onAction="#addactiontab" prefHeight="26.0" prefWidth="54.0" text="ADD" />
+                                    <Button fx:id="financebutton" mnemonicParsing="false" onAction="#viewfinance" prefHeight="26.0" prefWidth="49.0" text="VIEW" />
+                                    <Button mnemonicParsing="false" text="DELETE" />
+                                 </items>
+                              </ToolBar>
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab fx:id="viewtab" text="View">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="-2.0" prefHeight="339.0" prefWidth="551.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="membert" text="Members">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="membertx" layoutX="4.0" layoutY="39.0" prefHeight="270.0" prefWidth="542.0" />
+                                          <HBox alignment="CENTER_LEFT" layoutX="4.0" prefHeight="35.0" prefWidth="543.0" spacing="5.0" styleClass="thin-black-border">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="467.0" spacing="5.0">
+                                                   <children>
+                                                      <Label text="Search By" />
+                                                      <ComboBox editable="true" prefHeight="26.0" prefWidth="108.0" />
+                                                      <Label prefHeight="18.0" prefWidth="58.0" text="Search for" />
+                                                      <TextField prefHeight="26.0" prefWidth="108.0" />
+                                                      <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="56.0" text="Auto" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <styleClass>
+                                                      <String fx:value="thin-black-border" />
+                                                      <String fx:value="light-blue" />
+                                                   </styleClass>
+                                                </HBox>
+                                                <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/ms-excel.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button fx:id="printp" layoutX="480.0" layoutY="20.0" mnemonicParsing="false" onAction="#printmem" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/print.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#getmembers" prefHeight="24.0" prefWidth="19.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fx:id="refresh" fitHeight="15.0" fitWidth="18.0" onMouseClicked="#getmembers" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/refresh.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Events">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="538.0">
+                                       <children>
+                                          <TableView fx:id="tableview" layoutX="7.0" layoutY="40.0" prefHeight="262.0" prefWidth="542.0" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="543.0" spacing="5.0" styleClass="thin-black-border">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="467.0" spacing="5.0">
+                                                   <children>
+                                                      <Label text="Filter By" />
+                                                      <ComboBox editable="true" prefHeight="26.0" prefWidth="108.0" />
+                                                      <Label prefHeight="18.0" prefWidth="58.0" text="Search for" />
+                                                      <TextField prefHeight="26.0" prefWidth="108.0" />
+                                                      <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="56.0" text="Auto" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <styleClass>
+                                                      <String fx:value="thin-black-border" />
+                                                      <String fx:value="light-blue" />
+                                                   </styleClass>
+                                                </HBox>
+                                                <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/ms-excel.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button layoutX="480.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/print.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#getmembers" prefHeight="24.0" prefWidth="19.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fx:id="refresh1" fitHeight="15.0" fitWidth="18.0" onMouseClicked="#getmembers" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/refresh.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Visitors">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="294.0" prefWidth="551.0">
+                                       <children>
+                                          <TableView fx:id="visitortview" layoutX="7.0" layoutY="41.0" prefHeight="262.0" prefWidth="542.0" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="543.0" spacing="5.0" styleClass="thin-black-border">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="467.0" spacing="5.0">
+                                                   <children>
+                                                      <Label text="Search By" />
+                                                      <ComboBox editable="true" prefHeight="26.0" prefWidth="108.0" />
+                                                      <Label prefHeight="18.0" prefWidth="58.0" text="Search for" />
+                                                      <TextField prefHeight="26.0" prefWidth="108.0" />
+                                                      <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="56.0" text="Auto" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <styleClass>
+                                                      <String fx:value="thin-black-border" />
+                                                      <String fx:value="light-blue" />
+                                                   </styleClass>
+                                                </HBox>
+                                                <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/ms-excel.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button layoutX="480.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/print.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#getmembers" prefHeight="24.0" prefWidth="19.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fx:id="refresh2" fitHeight="15.0" fitWidth="18.0" onMouseClicked="#getmembers" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/refresh.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Finance">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="financetable" layoutX="7.0" layoutY="39.0" prefHeight="264.0" prefWidth="542.0" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="543.0" spacing="5.0" styleClass="thin-black-border">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="467.0" spacing="5.0">
+                                                   <children>
+                                                      <Label text="Search By" />
+                                                      <ComboBox editable="true" prefHeight="26.0" prefWidth="108.0" />
+                                                      <Label prefHeight="18.0" prefWidth="58.0" text="Search for" />
+                                                      <TextField prefHeight="26.0" prefWidth="108.0" />
+                                                      <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="56.0" text="Auto" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <styleClass>
+                                                      <String fx:value="thin-black-border" />
+                                                      <String fx:value="light-blue" />
+                                                   </styleClass>
+                                                </HBox>
+                                                <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/ms-excel.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button layoutX="480.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/print.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#getmembers" prefHeight="24.0" prefWidth="19.0" styleClass="btn-bg-transparent">
+                                                   <graphic>
+                                                      <ImageView fx:id="refresh3" fitHeight="15.0" fitWidth="18.0" onMouseClicked="#getmembers" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/refresh.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="addtab">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="New Member">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox layoutX="102.0" layoutY="14.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="94.0" text="First Name" />
+                                          <TextField fx:id="mfn" alignment="CENTER" prefHeight="22.0" prefWidth="219.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="102.0" layoutY="53.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="94.0" text="Last Name" />
+                                          <TextField fx:id="mln" alignment="CENTER" prefHeight="22.0" prefWidth="219.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="102.0" layoutY="90.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="94.0" text="Residence" />
+                                          <TextField fx:id="mr" alignment="CENTER" prefHeight="22.0" prefWidth="219.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="102.0" layoutY="130.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="94.0" text="HomeTown" />
+                                          <TextField fx:id="mh" alignment="CENTER" prefHeight="22.0" prefWidth="219.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="102.0" layoutY="172.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="94.0" text="Mobile Number" />
+                                          <TextField fx:id="mmno" alignment="CENTER" onKeyPressed="#validateno" prefHeight="22.0" prefWidth="219.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="102.0" layoutY="210.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="94.0" text="Email" />
+                                          <TextField fx:id="memail" alignment="CENTER" prefHeight="22.0" prefWidth="219.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="102.0" layoutY="246.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="94.0" text="Password" />
+                                          <PasswordField fx:id="mpass" prefHeight="26.0" prefWidth="218.0" />
+                                       </children>
+                                    </HBox>
+                                    <ComboBox fx:id="gender" layoutX="14.0" layoutY="16.0" prefHeight="26.0" prefWidth="81.0" promptText="Gender" />
+                                    <HBox layoutX="102.0" layoutY="279.0" prefHeight="30.0" prefWidth="346.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="94.0" text="Ministry" />
+                                          <ChoiceBox fx:id="ministries" prefHeight="26.0" prefWidth="219.0" />
+                                       </children>
+                                    </HBox>
+                                    <Button layoutX="468.0" layoutY="142.0" mnemonicParsing="false" onAction="#addmember" text="Save" />
+                                    <Label alignment="TOP_LEFT" layoutX="434.0" layoutY="21.0" prefHeight="38.0" prefWidth="109.0" text="[message for registration]" textAlignment="CENTER" wrapText="true" />
+                                    <Label alignment="TOP_LEFT" layoutX="434.0" layoutY="227.0" prefHeight="38.0" prefWidth="109.0" text="[display error details]" textAlignment="CENTER" wrapText="true" />
+                                    <DatePicker fx:id="dob" layoutX="7.0" layoutY="71.0" prefHeight="26.0" prefWidth="94.0" promptText="D.O.B" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab fx:id="eventtab" text="New Event">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox layoutX="24.0" layoutY="54.0" prefHeight="30.0" prefWidth="497.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="38.0" prefWidth="78.0" text="Title" />
+                                          <TextField fx:id="etitle" prefHeight="26.0" prefWidth="419.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="24.0" layoutY="84.0" prefHeight="30.0" prefWidth="497.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="38.0" prefWidth="78.0" text="Date" />
+                                          <DatePicker fx:id="edate" prefHeight="26.0" prefWidth="417.0" promptText="dd/mm/yyyy" />
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="46.0" layoutY="122.0" prefHeight="18.0" prefWidth="54.0" text="Describe" />
+                                    <TextField fx:id="edesc" alignment="TOP_LEFT" layoutX="101.0" layoutY="128.0" prefHeight="132.0" prefWidth="425.0" promptText="Enter Information about the event" />
+                                    <Button layoutX="250.0" layoutY="270.0" mnemonicParsing="false" onAction="#addevent" text="Save" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="New Visitor">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox layoutX="64.0" layoutY="20.0" prefHeight="30.0" prefWidth="398.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="24.0" prefWidth="85.0" text="First Name" />
+                                          <TextField fx:id="vfn" prefHeight="26.0" prefWidth="313.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="64.0" layoutY="50.0" prefHeight="30.0" prefWidth="398.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="24.0" prefWidth="85.0" text="LastName" />
+                                          <TextField fx:id="vln" prefHeight="26.0" prefWidth="313.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="64.0" layoutY="80.0" prefHeight="30.0" prefWidth="398.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="24.0" prefWidth="85.0" text="Residence" />
+                                          <TextField fx:id="vr" prefHeight="26.0" prefWidth="313.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="64.0" layoutY="110.0" prefHeight="30.0" prefWidth="398.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="24.0" prefWidth="85.0" text="Event attended" />
+                                          <TextField fx:id="ve" prefHeight="26.0" prefWidth="313.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="64.0" layoutY="146.0" prefHeight="30.0" prefWidth="398.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="24.0" prefWidth="85.0" text="Day of Visit" />
+                                          <DatePicker fx:id="vd" prefHeight="26.0" prefWidth="314.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="64.0" layoutY="176.0" prefHeight="30.0" prefWidth="398.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="24.0" prefWidth="85.0" text="Phone number" />
+                                          <TextField fx:id="vmobile" prefHeight="26.0" prefWidth="313.0" />
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="savevisitors" alignment="CENTER" layoutX="250.0" layoutY="239.0" mnemonicParsing="false" onAction="#getaddvisitorsbutton" prefHeight="18.0" prefWidth="24.0">
+                                       <graphic>
+                                          <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/save-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="New Finance">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox layoutX="89.0" layoutY="24.0" prefHeight="30.0" prefWidth="282.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="26.0" prefWidth="125.0" text="Amout" />
+                                          <TextField fx:id="famount" prefHeight="26.0" prefWidth="205.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="89.0" layoutY="56.0" prefHeight="30.0" prefWidth="282.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="26.0" prefWidth="105.0" text="Transaction code" />
+                                          <TextField fx:id="ftrcode" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="89.0" layoutY="86.0" prefHeight="30.0" prefWidth="282.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="26.0" prefWidth="105.0" text="Mobile" />
+                                          <TextField fx:id="fmobile" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="financesave" layoutX="250.0" layoutY="154.0" mnemonicParsing="false" onAction="#savefinance" text="Save" />
+                                 </children>
+                              </AnchorPane>
+                           </content></Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Tab>
+            <Tab>
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
+               </content>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/TUMTECH/IdeaProjects/src/main/resources/com/bse2/projects/images/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Tab>
+        </tabs>
+      </TabPane>
+      <Label alignment="CENTER" layoutX="222.0" layoutY="485.0" prefHeight="30.0" prefWidth="543.0" style="-fx-background-color: #0099CCFF;" text="Church Information Management System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

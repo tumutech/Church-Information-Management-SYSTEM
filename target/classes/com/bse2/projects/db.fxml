@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bse2.projects.AdminController">
+   <children>
+      <Label fx:id="myview" layoutX="483.0" layoutY="14.0" prefHeight="26.0" prefWidth="102.0" text="Database view" />
+      <Button fx:id="conbutton" layoutX="274.0" layoutY="240.0" mnemonicParsing="false" onAction="#connectnow" text="Connect" />
+   </children>
+</AnchorPane>

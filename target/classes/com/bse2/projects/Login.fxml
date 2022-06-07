@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="725.0" style="-fx-background-color: #CCCCCCFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bse2.projects.LoginController">
+   <children>
+      <TabPane layoutX="109.0" layoutY="19.0" pickOnBounds="false" prefHeight="311.0" prefWidth="526.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Login">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 10px 10px 0px 0px;">
+                     <children>
+                        <AnchorPane layoutX="-1.0" layoutY="71.0" prefHeight="210.0" prefWidth="526.0" style="-fx-background-color: #0099CCFF; -fx-opacity: 80%;">
+                           <children>
+                              <TextField fx:id="username" alignment="CENTER" blendMode="LIGHTEN" layoutX="188.0" layoutY="92.0" promptText="Username" />
+                              <PasswordField fx:id="password" alignment="CENTER" layoutX="188.0" layoutY="126.0" promptText="Password" />
+                              <Button fx:id="login" layoutX="240.0" layoutY="162.0" mnemonicParsing="false" onAction="#login" text="Login" />
+                              <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="188.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/lock.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="188.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/user.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="acctype" layoutX="188.0" layoutY="53.0" prefWidth="150.0" promptText="Account type" />
+                              <Label fx:id="message" alignment="CENTER" layoutX="178.0" layoutY="187.0" prefHeight="18.0" prefWidth="170.0" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="113.0" fitWidth="127.0" layoutX="202.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/login.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Sign Up">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="38.0" layoutY="83.0" prefHeight="184.0" prefWidth="177.0" style="-fx-background-color: #CCCCCCFF; -fx-border-radius: 10px 10px 0px 0px; -fx-background-radius: 10px 10px 0px 0px;">
+                           <children>
+                              <TextField fx:id="fname" alignment="CENTER" prefHeight="26.0" prefWidth="147.0" promptText="Enter First Name" />
+                              <TextField fx:id="lname" alignment="CENTER" layoutX="10.0" layoutY="89.0" prefHeight="26.0" prefWidth="147.0" promptText="Enter Last Name" />
+                              <TextField fx:id="residence" alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="26.0" prefWidth="147.0" promptText="Enter Residence Name" />
+                              <TextField fx:id="hometown" alignment="CENTER" layoutX="10.0" layoutY="116.0" prefHeight="26.0" prefWidth="147.0" promptText="Enter Home Town" />
+                              <TextField fx:id="mobileno" alignment="CENTER" layoutX="10.0" layoutY="128.0" prefHeight="26.0" prefWidth="147.0" promptText="Enter Mobile number" />
+                              <TextField fx:id="email" alignment="CENTER" layoutX="10.0" layoutY="142.0" prefHeight="26.0" prefWidth="147.0" promptText="Enter Email" />
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="70.0" fitWidth="71.0" layoutX="228.0" layoutY="14.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/reg.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane layoutX="334.0" layoutY="84.0" prefHeight="182.0" prefWidth="161.0">
+                           <children>
+                              <ComboBox fx:id="gender" layoutX="7.0" layoutY="14.0" prefHeight="26.0" prefWidth="146.0" promptText="Gender" />
+                              <DatePicker fx:id="dob" layoutX="9.0" layoutY="50.0" prefHeight="26.0" prefWidth="144.0" />
+                              <Button fx:id="reg" layoutX="50.0" layoutY="155.0" mnemonicParsing="false" onAction="#registernewmember" text="Register" />
+                              <PasswordField fx:id="npassword" alignment="CENTER" layoutX="7.0" layoutY="124.0" promptText="Password" />
+                              <ChoiceBox fx:id="ministry" layoutX="5.0" layoutY="91.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label alignment="CENTER" layoutX="109.0" layoutY="343.0" prefHeight="29.0" prefWidth="526.0" style="-fx-background-color: white; -fx-background-radius: 0px 0px 10px 10px;" text="Church Information Management System" textFill="#0099cc">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
